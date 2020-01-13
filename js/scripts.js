@@ -1,6 +1,24 @@
 
+var code = 'Run Cipher';
+var plainText = '';
+
+
+
+$('#before').click(function(){
+  $('#readout').html(plainText);
+});
+
+$('#after').click(function(){
+  $('#readout').html(code);
+});
+
+var madeCipher = function() {
+  $('#readout').html(plainText);
+};
+
 var cipher = function() {
   var sentence = prompt("Enter a sentence")
+  plainText = sentence;
   
   var firstTwo = function(string){
     var firstLetter = string.charAt(0).toUpperCase();
@@ -27,8 +45,8 @@ var cipher = function() {
     var wholeThing = firstLetter+newSentence+lastTwoLetters;
     return wholeThing.split('').reverse().join('');
   };
-
-  return makeNewSentence(sentence);
+  var newCode = makeNewSentence(sentence);
+  code = newCode;
+  madeCipher();
+  return newCode;
 }
-
-console.log(cipher());

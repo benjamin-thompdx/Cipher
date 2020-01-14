@@ -2,6 +2,8 @@
 
 #### _Message encoder for hiding messages, 01.13.2020_
 
+[working demo](https://dustatron.github.io/epicodus-cipher/)
+
 #### By _**Dusty, Ben, and Jonathan**_
 
 ## Description
